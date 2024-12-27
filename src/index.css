@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Card Flip Styles */
+/* App.css or a separate CSS file */
+.flip-card-container {
+    width: 300px;
+    height: 200px;
+    perspective: 1000px; /* Important for 3D effect */
+  }
+  
+  .flip-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card.flipped {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hide back face */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .flip-card-back {
+    transform: rotateY(180deg); /* Rotate back face */
+  }
+  
+  .card-content {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* Vertically center content */
+      align-items: center; /* Horizontally center content */
+  }
+
+  /* App.css or separate CSS file (Same as before with one addition) */
+.flip-card-container {
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+    cursor: pointer;
+  }
+  
+  /* ... (rest of the CSS remains the same) */
+
+  /* App.css */
+.flip-card-container {
+  /* ... */
+  transition: transform 0.5s ease-in-out; /* Smooth flip transition */
+}
+
+.flip-card {
+  /* ... */
+  transition: transform 0.5s ease-in-out; /* Smooth flip transition */
+}
+
+/* Add transition for swipe (if needed) */
+.surah-display-container { /* Add this class to the SurahDisplay main div */
+  transition: transform 0.3s ease-in-out; /* Adjust timing as needed */
+}
+
+/* other css remain same */
